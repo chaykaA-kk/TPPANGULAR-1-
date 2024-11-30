@@ -1,0 +1,8 @@
+<input [(ngModel)]="inputText" placeholder="Enter text here" />
+<button (click)="addItem()">Add to List</button>
+<button (click)="deleteItem()">Delete Last Item</button>
+
+<!-- Display the items as an unordered list with random colors -->
+<ul>
+  <li *ngFor="let item of items" [style.color]="item.color">{{ item.word }}</li>
+</ul>
